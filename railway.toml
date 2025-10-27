@@ -4,8 +4,5 @@ builder = "NIXPACKS"
 [build.env]
 NIXPACKS_PHP_VERSION = "8.3"
 
-[build.command]
-cmd = "composer install --no-dev --optimize-autoloader && php artisan key:generate && php artisan migrate --force && php artisan storage:link"
-
 [start]
 cmd = "php artisan serve --host 0.0.0.0 --port 8080"
